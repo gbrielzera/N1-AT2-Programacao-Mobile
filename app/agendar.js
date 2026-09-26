@@ -14,9 +14,9 @@ import {
 } from 'react-native';
 import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import Header from '../components/Header';
-import Category from '../components/Category';
-import Button from '../components/Button';
+import Cabecalho from '../components/Cabecalho';
+import Categoria from '../components/Categoria';
+import Botao from '../components/Botao';
 import colors from '../theme/colors';
 import { categorias, servidores } from '../data/content';
 
@@ -54,7 +54,7 @@ export default function Agendar() {
       style={styles.container}
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
     >
-      <Header title="Agendar partida" onBack={() => router.back()} />
+      <Cabecalho title="Agendar partida" onBack={() => router.back()} />
 
       <Pressable style={styles.flex} onPress={Keyboard.dismiss}>
         <ScrollView contentContainerStyle={styles.scroll} bounces={false}>
@@ -62,7 +62,7 @@ export default function Agendar() {
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
             <View style={styles.categoriasLinha}>
               {categorias.map((categoria) => (
-                <Category
+                <Categoria
                   key={categoria.id}
                   titulo={categoria.titulo}
                   icone={categoria.icone}
@@ -140,7 +140,7 @@ export default function Agendar() {
           />
 
           <View style={styles.botaoBox}>
-            <Button title="Agendar" onPress={agendar} disabled={!formularioValido} />
+            <Botao title="Agendar" onPress={agendar} disabled={!formularioValido} />
           </View>
         </ScrollView>
       </Pressable>

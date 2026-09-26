@@ -3,7 +3,7 @@ import { Ionicons } from '@expo/vector-icons';
 import colors from '../theme/colors';
 
 // Item da lista "Partidas agendadas", na Home.
-export default function Appointment({ capa, titulo, categoria, data, hora, papel, onPress }) {
+export default function Partida({ capa, titulo, categoria, data, hora, papel, onPress }) {
   const ehAnfitriao = papel === 'Anfitrião';
 
   return (

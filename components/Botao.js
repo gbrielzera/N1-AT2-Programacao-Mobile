@@ -6,7 +6,7 @@ import colors from '../theme/colors';
 // Quando `icon` é informado, o ícone aparece dentro de uma caixinha à
 // esquerda, separada do texto por uma linha vertical (igual ao botão
 // "Entrar com Discord" e "Entrar na partida" do protótipo).
-export default function Button({ title, onPress, disabled, icon }) {
+export default function Botao({ title, onPress, disabled, icon }) {
   return (
     <TouchableOpacity
       style={[styles.container, disabled && styles.containerDisabled]}

@@ -1,9 +1,9 @@
 import { Alert, Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router, useLocalSearchParams } from 'expo-router';
-import Header from '../components/Header';
-import Member from '../components/Member';
-import Button from '../components/Button';
+import Cabecalho from '../components/Cabecalho';
+import Jogador from '../components/Jogador';
+import Botao from '../components/Botao';
 import colors from '../theme/colors';
 import { partidas, jogadoresPorPartida } from '../data/content';
 
@@ -19,7 +19,7 @@ export default function Detalhes() {
 
   return (
     <View style={styles.container}>
-      <Header
+      <Cabecalho
         title="Detalhes"
         onBack={() => router.back()}
         rightIcon="share-social"
@@ -42,14 +42,14 @@ export default function Detalhes() {
 
           <View>
             {jogadores.map((jogador) => (
-              <Member key={jogador.id} nome={jogador.nome} avatar={jogador.avatar} status={jogador.status} />
+              <Jogador key={jogador.id} nome={jogador.nome} avatar={jogador.avatar} status={jogador.status} />
             ))}
           </View>
         </View>
       </ScrollView>
 
       <SafeAreaView edges={['bottom']} style={styles.rodape}>
-        <Button title="Entrar na partida" icon="discord" onPress={entrarNaPartida} />
+        <Botao title="Entrar na partida" icon="discord" onPress={entrarNaPartida} />
       </SafeAreaView>
     </View>
   );

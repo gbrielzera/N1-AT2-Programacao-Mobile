@@ -2,9 +2,9 @@ import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-nati
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import Profile from '../components/Profile';
-import Category from '../components/Category';
-import Appointment from '../components/Appointment';
+import Perfil from '../components/Perfil';
+import Categoria from '../components/Categoria';
+import Partida from '../components/Partida';
 import colors from '../theme/colors';
 import { usuario, categorias, partidas } from '../data/content';
 
@@ -14,7 +14,7 @@ export default function Home() {
     <SafeAreaView style={styles.container} edges={['top', 'bottom']}>
       <ScrollView contentContainerStyle={styles.scroll} bounces={false}>
         <View style={styles.topo}>
-          <Profile nome={usuario.nome} frase="Hoje é dia de vitória" avatar={usuario.avatar} />
+          <Perfil nome={usuario.nome} frase="Hoje é dia de vitória" avatar={usuario.avatar} />
 
           <TouchableOpacity style={styles.botaoMais} onPress={() => router.push('/agendar')}>
             <Ionicons name="add" size={28} color={colors.white} />
@@ -24,7 +24,7 @@ export default function Home() {
         <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.categorias}>
           <View style={styles.categoriasLinha}>
             {categorias.map((categoria) => (
-              <Category key={categoria.id} titulo={categoria.titulo} icone={categoria.icone} />
+              <Categoria key={categoria.id} titulo={categoria.titulo} icone={categoria.icone} />
             ))}
           </View>
         </ScrollView>
@@ -36,7 +36,7 @@ export default function Home() {
 
         <View style={styles.lista}>
           {partidas.map((partida) => (
-            <Appointment
+            <Partida
               key={partida.id}
               capa={partida.capa}
               titulo={partida.titulo}

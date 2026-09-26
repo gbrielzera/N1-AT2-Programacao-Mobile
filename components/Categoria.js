@@ -6,7 +6,7 @@ import colors from '../theme/colors';
 // Na Home ele é só exibido (fundo navy fixo).
 // No Agendar ele é selecionável: recebe `selecionavel` e `selecionado`,
 // muda de cor e mostra um checkbox no canto quando marcado.
-export default function Category({
+export default function Categoria({
   titulo,
   icone,
   onPress,

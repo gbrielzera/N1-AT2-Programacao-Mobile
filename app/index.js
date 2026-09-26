@@ -1,7 +1,7 @@
 import { Image, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { router } from 'expo-router';
-import Button from '../components/Button';
+import Botao from '../components/Botao';
 import colors from '../theme/colors';
 
 // Tela de Login.
@@ -24,7 +24,7 @@ export default function Login() {
           Crie grupos para jogar seus games favoritos com seus amigos
         </Text>
 
-        <Button
+        <Botao
           title="Entrar com Discord"
           icon="discord"
           onPress={() => router.replace('/home')}

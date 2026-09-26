@@ -3,7 +3,7 @@ import Avatar from './Avatar';
 import colors from '../theme/colors';
 
 // Linha de jogador na tela de Detalhes: avatar, nome e status (bolinha colorida).
-export default function Member({ nome, avatar, status }) {
+export default function Jogador({ nome, avatar, status }) {
   const disponivel = status === 'disponivel';
 
   return (
