@@ -15,7 +15,9 @@ export default function Cabecalho({ title, onBack, rightIcon, onRightPress }) {
             <Ionicons name="arrow-back" size={24} color={colors.white} />
           </TouchableOpacity>
 
-          <Text style={styles.title}>{title}</Text>
+          <Text style={styles.title} numberOfLines={1}>
+            {title}
+          </Text>
 
           {rightIcon ? (
             <TouchableOpacity onPress={onRightPress} hitSlop={12}>
@@ -42,9 +44,12 @@ const styles = StyleSheet.create({
     paddingVertical: 16,
   },
   title: {
+    flex: 1,
     color: colors.white,
     fontSize: 20,
     fontWeight: '700',
+    textAlign: 'center',
+    marginHorizontal: 12,
   },
   placeholder: {
     width: 24,

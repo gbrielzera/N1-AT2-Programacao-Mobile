@@ -14,7 +14,9 @@ export default function Home() {
     <SafeAreaView style={styles.container} edges={['top', 'bottom']}>
       <ScrollView contentContainerStyle={styles.scroll} bounces={false}>
         <View style={styles.topo}>
-          <Perfil nome={usuario.nome} frase="Hoje é dia de vitória" avatar={usuario.avatar} />
+          <View style={styles.perfilBox}>
+            <Perfil nome={usuario.nome} frase="Hoje é dia de vitória" avatar={usuario.avatar} />
+          </View>
 
           <TouchableOpacity style={styles.botaoMais} onPress={() => router.push('/agendar')}>
             <Ionicons name="add" size={28} color={colors.white} />
@@ -67,6 +69,9 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: 16,
+  },
+  perfilBox: {
+    flex: 1,
   },
   botaoMais: {
     width: 56,

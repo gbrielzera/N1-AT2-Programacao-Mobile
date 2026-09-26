@@ -9,10 +9,12 @@ export default function Perfil({ nome, frase, avatar }) {
       <Avatar uri={avatar} size={56} />
 
       <View style={styles.texts}>
-        <Text style={styles.saudacao}>
+        <Text style={styles.saudacao} numberOfLines={1}>
           Olá, <Text style={styles.nome}>{nome}</Text>
         </Text>
-        <Text style={styles.frase}>{frase}</Text>
+        <Text style={styles.frase} numberOfLines={1}>
+          {frase}
+        </Text>
       </View>
     </View>
   );
