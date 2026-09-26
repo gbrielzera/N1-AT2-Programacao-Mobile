@@ -27,11 +27,13 @@ export default function Detalhes() {
       />
 
       <ScrollView bounces={false} contentContainerStyle={styles.scroll}>
-        <Image source={partida.capa} style={styles.banner} resizeMode="cover" />
-        <View style={styles.bannerSombra} />
-        <View style={styles.bannerTextos}>
-          <Text style={styles.bannerTitulo}>{partida.titulo}</Text>
-          <Text style={styles.bannerDescricao}>{partida.descricao}</Text>
+        <View style={styles.bannerWrapper}>
+          <Image source={partida.capa} style={styles.banner} resizeMode="cover" />
+          <View style={styles.bannerSombra} />
+          <View style={styles.bannerTextos}>
+            <Text style={styles.bannerTitulo}>{partida.titulo}</Text>
+            <Text style={styles.bannerDescricao}>{partida.descricao}</Text>
+          </View>
         </View>
 
         <View style={styles.corpo}>
@@ -63,15 +65,19 @@ const styles = StyleSheet.create({
   scroll: {
     flexGrow: 1,
   },
-  banner: {
+  bannerWrapper: {
     width: '100%',
     height: 280,
+  },
+  banner: {
+    width: '100%',
+    height: '100%',
   },
   bannerSombra: {
     position: 'absolute',
     top: 0,
+    bottom: 0,
     width: '100%',
-    height: 280,
     backgroundColor: 'rgba(14,20,64,0.45)',
   },
   bannerTextos: {
