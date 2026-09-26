@@ -4,7 +4,6 @@ import colors from '../theme/colors';
 
 // Card de categoria.
 // Na Home ele é só exibido (fundo navy fixo).
-// No Agendar ele é selecionável: recebe `selecionavel` e `selecionado`,
 // muda de cor e mostra um checkbox no canto quando marcado.
 export default function Categoria({
   titulo,

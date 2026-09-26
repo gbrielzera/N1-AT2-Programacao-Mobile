@@ -11,7 +11,7 @@ const avatarPerfil2 = require('../assets/images/perfil 2.webp');
 const avatarPerfil3 = require('../assets/images/profile 3.webp');
 
 export const usuario = {
-  nome: 'Tiago',
+  nome: 'Avril Lavigne',
   avatar: avatarPerfil1,
 };
 
@@ -82,9 +82,9 @@ export const partidas = [
 
 export const jogadoresPorPartida = {
   1: [
-    { id: 'a', nome: 'Tiago Luchtenberg', avatar: avatarPerfil1, status: 'disponivel' },
-    { id: 'b', nome: 'Rodrigo Gonçalves', avatar: avatarPerfil2, status: 'ocupado' },
-    { id: 'c', nome: 'Diego Fernandes', avatar: avatarPerfil3, status: 'ocupado' },
+    { id: 'a', nome: 'Avril Lavigne', avatar: avatarPerfil1, status: 'disponivel' },
+    { id: 'b', nome: 'Hayley Williams', avatar: avatarPerfil2, status: 'ocupado' },
+    { id: 'c', nome: 'Emily Armstrong', avatar: avatarPerfil3, status: 'ocupado' },
   ],
 };
 

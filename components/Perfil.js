@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import Avatar from './Avatar';
 import colors from '../theme/colors';
 
-// Cabeçalho "Olá, Fulano" com avatar e frase de efeito, usado na Home.
+// Cabeçalho com avatar e frase de efeito, usado na Home.
 export default function Perfil({ nome, frase, avatar }) {
   return (
     <View style={styles.container}>

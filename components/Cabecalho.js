@@ -4,7 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Ionicons } from '@expo/vector-icons';
 import colors from '../theme/colors';
 
-// Cabeçalho navy com seta de voltar, título e um ícone opcional à direita.
+// Cabeçalho com seta de voltar, título e ícone opcional na direita.
 export default function Cabecalho({ title, onBack, rightIcon, onRightPress }) {
   return (
     <View style={styles.wrapper}>

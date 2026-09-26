@@ -3,9 +3,6 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import colors from '../theme/colors';
 
 // Botão padrão do app.
-// Quando `icon` é informado, o ícone aparece dentro de uma caixinha à
-// esquerda, separada do texto por uma linha vertical (igual ao botão
-// "Entrar com Discord" e "Entrar na partida" do protótipo).
 export default function Botao({ title, onPress, disabled, icon }) {
   return (
     <TouchableOpacity

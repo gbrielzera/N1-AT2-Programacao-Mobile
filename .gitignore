@@ -8,6 +8,8 @@ claude_*.log
 .claude-memory/
 .claude-state/
 CLAUDE.md
+AGENDS.md
+LICENSE.md
 
 # Dependencies
 node_modules/
