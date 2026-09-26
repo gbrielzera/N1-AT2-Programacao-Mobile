@@ -6,7 +6,7 @@ import colors from '../theme/colors';
 export default function Perfil({ nome, frase, avatar }) {
   return (
     <View style={styles.container}>
-      <Avatar uri={avatar} size={56} />
+      <Avatar source={avatar} size={56} />
 
       <View style={styles.texts}>
         <Text style={styles.saudacao} numberOfLines={1}>

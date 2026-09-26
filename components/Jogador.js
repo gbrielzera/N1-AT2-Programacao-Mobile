@@ -8,7 +8,7 @@ export default function Jogador({ nome, avatar, status }) {
 
   return (
     <View style={styles.container}>
-      <Avatar uri={avatar} size={64} />
+      <Avatar source={avatar} size={64} />
 
       <View style={styles.info}>
         <Text style={styles.nome}>{nome}</Text>

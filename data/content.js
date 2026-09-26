@@ -6,9 +6,13 @@ const capaRumoAoTopo = require('../assets/images/Rumo ao topo.png');
 const capaBoraQueimarTudo = require('../assets/images/Bora queimar tudo.png');
 const capaValorosos = require('../assets/images/Valorosos.png');
 
+const avatarPerfil1 = require('../assets/images/perfil 1.webp');
+const avatarPerfil2 = require('../assets/images/perfil 2.webp');
+const avatarPerfil3 = require('../assets/images/profile 3.webp');
+
 export const usuario = {
   nome: 'Tiago',
-  avatar: 'https://i.pravatar.cc/150?img=12',
+  avatar: avatarPerfil1,
 };
 
 export const categorias = [
@@ -78,9 +82,9 @@ export const partidas = [
 
 export const jogadoresPorPartida = {
   1: [
-    { id: 'a', nome: 'Tiago Luchtenberg', avatar: 'https://i.pravatar.cc/150?img=12', status: 'disponivel' },
-    { id: 'b', nome: 'Rodrigo Gonçalves', avatar: 'https://i.pravatar.cc/150?img=33', status: 'ocupado' },
-    { id: 'c', nome: 'Diego Fernandes', avatar: 'https://i.pravatar.cc/150?img=51', status: 'ocupado' },
+    { id: 'a', nome: 'Tiago Luchtenberg', avatar: avatarPerfil1, status: 'disponivel' },
+    { id: 'b', nome: 'Rodrigo Gonçalves', avatar: avatarPerfil2, status: 'ocupado' },
+    { id: 'c', nome: 'Diego Fernandes', avatar: avatarPerfil3, status: 'ocupado' },
   ],
 };
 
