@@ -1,5 +1,5 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import colors from '../theme/colors';
 
 // Card de categoria.
@@ -24,9 +24,7 @@ export default function Categoria({
       disabled={!selecionavel}
     >
       {selecionavel && (
-        <View style={[styles.checkbox, selecionado && styles.checkboxMarcado]}>
-          {selecionado && <Ionicons name="checkmark" size={12} color={colors.white} />}
-        </View>
+        <View style={[styles.checkbox, selecionado && styles.checkboxMarcado]} />
       )}
 
       <MaterialCommunityIcons name={icone} size={32} color={colors.white} />
@@ -40,7 +38,7 @@ const styles = StyleSheet.create({
     width: 96,
     height: 96,
     borderRadius: 12,
-    backgroundColor: colors.navy,
+    backgroundColor: colors.surface,
     alignItems: 'center',
     justifyContent: 'center',
     gap: 8,
@@ -58,16 +56,12 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 8,
     right: 8,
-    width: 14,
-    height: 14,
+    width: 12,
+    height: 12,
     borderRadius: 3,
-    borderWidth: 1,
-    borderColor: colors.white,
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: 'rgba(255, 255, 255, 0.15)',
   },
   checkboxMarcado: {
     backgroundColor: colors.primary,
-    borderColor: colors.primary,
   },
 });

@@ -9,6 +9,9 @@ export default function Login() {
   return (
     <SafeAreaView style={styles.container} edges={['top', 'bottom']}>
       <View style={styles.ilustracaoBox}>
+        <View style={styles.faixaGrande} />
+        <View style={styles.faixaPequena} />
+
         <Image
           source={require('../assets/images/Imagem login.png')}
           style={styles.ilustracao}
@@ -46,6 +49,26 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 320,
     backgroundColor: colors.navy,
+    overflow: 'hidden',
+  },
+  faixaGrande: {
+    position: 'absolute',
+    top: -60,
+    right: -60,
+    width: 110,
+    height: 480,
+    backgroundColor: colors.primary,
+    transform: [{ rotate: '25deg' }],
+  },
+  faixaPequena: {
+    position: 'absolute',
+    bottom: -80,
+    left: -70,
+    width: 60,
+    height: 300,
+    backgroundColor: colors.primary,
+    opacity: 0.85,
+    transform: [{ rotate: '25deg' }],
   },
   ilustracao: {
     width: '100%',

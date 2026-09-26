@@ -1,27 +1,33 @@
-// Paleta de cores do app, baseada nas telas do protótipo do Figma (GamePlay)
+// Paleta de cores do app — tema escuro, baseado nos valores reais
+// extraídos do protótipo do Figma (GamePlay).
 export default {
-  // fundo padrão das telas
-  background: '#FFFFFF',
+  // fundo geral de todas as telas (navy bem escuro)
+  background: '#0D1440',
 
-  // navy escuro: cabeçalho, cards de categoria e caixas de input do Agendar
-  navy: '#0E1440',
-  navyLight: '#171E5B',
+  // navy um pouco mais claro: cards de categoria selecionados, campos de
+  // input (dia/mês, hora/minuto, descrição) e o cartão de servidor
+  surface: '#1B2464',
 
-  // vermelho/rosa: botão principal, "+", bolinha "Ocupado"
-  primary: '#E5334D',
+  // navy intermediário: cards de categoria NÃO selecionados no Agendar
+  surfaceDim: '#151D53',
 
-  // verde: bolinha "Disponível"
-  success: '#2ED573',
+  // vermelho/rosa: botão principal, "+", indicador de categoria marcada,
+  // bolinha "Ocupado"
+  primary: '#E51C44',
+
+  // verde: bolinha "Disponível", papel "Visitante"
+  success: '#32BD50',
 
   // textos
-  heading: '#0E1440', // títulos escuros (ex: "Lendários", nome do jogador)
-  text: '#5C6079', // texto secundário (descrições, subtítulos)
-  label: '#9AA0C0', // rótulos claros (ex: "Categoria", "Jogadores", "Total")
+  heading: '#FFFFFF', // títulos (ex: "Lendários", nome do jogador, "Olá, Tiago")
+  text: '#C7CBE3', // texto secundário com mais contraste (descrições, subtítulos)
+  label: '#9AA0C0', // rótulos discretos (ex: "Categoria", "Jogadores", "Total")
 
-  // categorias não selecionadas na tela de Agendar
-  categoryInactive: '#8890AC',
+  // linhas e bordas (bem sutis sobre fundo escuro)
+  line: 'rgba(255, 255, 255, 0.08)',
 
-  // linhas e bordas
-  line: '#E4E5EC',
+  // mantidos para compatibilidade com os componentes já escritos
+  navy: '#0D1440',
+  categoryInactive: '#151D53',
   white: '#FFFFFF',
 };
