@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import {
   Alert,
+  Image,
   Keyboard,
   KeyboardAvoidingView,
   Platform,
@@ -18,7 +19,7 @@ import Cabecalho from '../components/Cabecalho';
 import Categoria from '../components/Categoria';
 import Botao from '../components/Botao';
 import colors from '../theme/colors';
-import { categorias, servidores } from '../data/content';
+import { categorias, servidorSelecionado } from '../data/content';
 
 // Tela de Agendar partida, com o servidor já selecionado (vindo da Home ou
 // dos Detalhes). A lista de categorias tem estado: tocar em uma marca ela e
@@ -31,8 +32,6 @@ export default function Agendar() {
   const [minuto, setMinuto] = useState('');
   const [descricao, setDescricao] = useState('');
 
-  const servidorSelecionado = servidores[0];
-
   const formularioValido =
     categoriaSelecionada !== null &&
     dia.length > 0 &&
@@ -44,7 +43,7 @@ export default function Agendar() {
   function agendar() {
     Alert.alert(
       'Partida agendada!',
-      `${servidorSelecionado.nome} — ${dia}/${mes} às ${hora}:${minuto}`
+      `${servidorSelecionado.titulo} — ${dia}/${mes} às ${hora}:${minuto}`
     );
     router.back();
   }
@@ -75,8 +74,13 @@ export default function Agendar() {
           </ScrollView>
 
           <TouchableOpacity style={styles.servidorBox} activeOpacity={0.7}>
-            <View style={styles.servidorIcone} />
-            <Text style={styles.servidorTexto}>{servidorSelecionado.nome}</Text>
+            <Image source={servidorSelecionado.capa} style={styles.servidorCapa} resizeMode="cover" />
+
+            <View style={styles.servidorTextos}>
+              <Text style={styles.servidorNome}>{servidorSelecionado.titulo}</Text>
+              <Text style={styles.servidorJogo}>{servidorSelecionado.jogo}</Text>
+            </View>
+
             <Ionicons name="chevron-forward" size={20} color={colors.label} />
           </TouchableOpacity>
 
@@ -180,17 +184,25 @@ const styles = StyleSheet.create({
     borderColor: colors.navy,
     borderRadius: 8,
     padding: 4,
+    paddingRight: 16,
     marginTop: 20,
   },
-  servidorIcone: {
-    width: 48,
-    height: 48,
+  servidorCapa: {
+    width: 64,
+    height: 64,
     borderRadius: 6,
-    backgroundColor: colors.navy,
   },
-  servidorTexto: {
+  servidorTextos: {
     flex: 1,
-    fontSize: 15,
+    gap: 2,
+  },
+  servidorNome: {
+    fontSize: 16,
+    fontWeight: '700',
+    color: colors.heading,
+  },
+  servidorJogo: {
+    fontSize: 13,
     color: colors.label,
   },
   linhaData: {

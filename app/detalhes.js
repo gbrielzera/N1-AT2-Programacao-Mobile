@@ -27,7 +27,7 @@ export default function Detalhes() {
       />
 
       <ScrollView bounces={false} contentContainerStyle={styles.scroll}>
-        <Image source={{ uri: partida.banner }} style={styles.banner} />
+        <Image source={partida.capa} style={styles.banner} resizeMode="cover" />
         <View style={styles.bannerSombra} />
         <View style={styles.bannerTextos}>
           <Text style={styles.bannerTitulo}>{partida.titulo}</Text>

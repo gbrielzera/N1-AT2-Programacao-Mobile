@@ -8,10 +8,13 @@ import colors from '../theme/colors';
 export default function Login() {
   return (
     <SafeAreaView style={styles.container} edges={['top', 'bottom']}>
-      <Image
-        source={{ uri: 'https://picsum.photos/seed/gameplay-login/800/900' }}
-        style={styles.ilustracao}
-      />
+      <View style={styles.ilustracaoBox}>
+        <Image
+          source={require('../assets/images/Imagem login.png')}
+          style={styles.ilustracao}
+          resizeMode="contain"
+        />
+      </View>
 
       <View style={styles.tituloBox}>
         <Text style={styles.titulo}>
@@ -39,9 +42,14 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.background,
   },
-  ilustracao: {
+  ilustracaoBox: {
     width: '100%',
     height: 320,
+    backgroundColor: colors.navy,
+  },
+  ilustracao: {
+    width: '100%',
+    height: '100%',
   },
   tituloBox: {
     backgroundColor: colors.navy,

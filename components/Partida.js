@@ -8,7 +8,7 @@ export default function Partida({ capa, titulo, categoria, data, hora, papel, on
 
   return (
     <TouchableOpacity style={styles.container} onPress={onPress} activeOpacity={0.7}>
-      <Image source={{ uri: capa }} style={styles.capa} />
+      <Image source={capa} style={styles.capa} resizeMode="cover" />
 
       <View style={styles.info}>
         <View style={styles.linhaTopo}>
